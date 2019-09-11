@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budgetto</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <div id="main-container">
+        <header><h1>BUDGETTO</h1></header>
+
+        <div class="container">
+            <div class="form">
+                <form id="budget-form">
+                    <label>
+                        <span>Your budget:</span>
+                        <input type="number" name="budget">
+                    </label>
+                        <input type="submit" value="Give me more money">
+                </form>
+            </div>
+            <div class="summary-container">
+                <div class="amount">
+                    <span>Start budget</span>
+                    <img src="" alt="Budget">
+                    <span id="budget">0</span>
+                </div>
+                <div class="amount">
+                    <span>Revenues / expenses</span>
+                    <img src="" alt="Changes">
+                    <span id="operations">0</span>
+                </div>
+                <div class="amount">
+                    <span>Balance</span>
+                    <img src="" alt="Balance">
+                    <span id="balance">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="form">
+                <form id="operations-form">
+                    <label>
+                        <span>Operation's title:</span>
+                        <input type="text" name="title">
+                    </label>
+                    <label>
+                        <span>Your budget:</span>
+                        <input type="number" name="value">
+                    </label>
+                    <input type="submit" value="Where is my money?!">
+                </form>
+            </div>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Amount</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
