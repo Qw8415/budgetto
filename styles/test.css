@@ -1,0 +1,21 @@
+.container {
+    border: 1px solid black;
+}
+
+header,
+.summary,
+.operations-list {
+    border: 1px solid red;
+}
+
+.summary > div, table {
+    border: 1px solid green;
+}
+
+tr {
+    border: blue 1px solid;
+}
+
+th, td {
+    border: orange 1px solid;
+}

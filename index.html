@@ -4,65 +4,76 @@
     <meta charset="UTF-8">
     <title>Budgetto</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+<!--    <link rel="stylesheet" type="text/css" href="styles/test.css">-->
 </head>
 <body>
-    <div id="main-container">
-        <header><h1>BUDGETTO</h1></header>
+    <div class="container">
+        <header>
+            <h1>BUDGETTO</h1>
+        </header>
 
-        <div class="container">
-            <div class="form">
-                <form id="budget-form">
-                    <label>
-                        <span>Your budget:</span>
-                        <input type="number" name="budget">
-                    </label>
-                        <input type="submit" value="Give me more money">
-                </form>
+       <div class="budget-form">
+            <form id="budget-form">
+                <h3>Start budget:</h3>
+                <input id="budget-value" type="number" step="0.01" required>
+                <input id="budget-submit" type="submit">
+            </form>
+       </div>
+
+        <div class="summary">
+            <div>
+                <h3>Budget</h3>
+                <img class="image" src="images/budget-var.png" alt="budget">
+                <h3 id="budget-summary">0 PLN</h3>
             </div>
-            <div class="summary-container">
-                <div class="amount">
-                    <span>Start budget</span>
-                    <img src="" alt="Budget">
-                    <span id="budget">0</span>
-                </div>
-                <div class="amount">
-                    <span>Revenues / expenses</span>
-                    <img src="" alt="Changes">
-                    <span id="operations">0</span>
-                </div>
-                <div class="amount">
-                    <span>Balance</span>
-                    <img src="" alt="Balance">
-                    <span id="balance">0</span>
-                </div>
+            <div>
+                <h3>Operations</h3>
+                <img class="image" src="images/operations-var.png" alt="operations">
+                <h3 id="operations-summary">0 PLN</h3>
+            </div>
+            <div>
+                <h3>Balance</h3>
+                <img class="image" src="images/balance-var.png" alt="balance">
+                <h3 id="balance-summary">0 PLN</h3>
             </div>
         </div>
 
-        <div class="container">
-            <div class="form">
-                <form id="operations-form">
-                    <label>
-                        <span>Operation's title:</span>
-                        <input type="text" name="title">
-                    </label>
-                    <label>
-                        <span>Your budget:</span>
-                        <input type="number" name="value">
-                    </label>
-                    <input type="submit" value="Where is my money?!">
-                </form>
-            </div>
-            <div class="table-container">
-                <table>
+        <div class="operations-form">
+            <form id="operation-form">
+                <h3>Operation's title:</h3>
+                <input id="operation-title" type="text" required>
+                <h3>Operation's value:</h3>
+                <input id="operation-value" type="number" step="0.01" required>
+                <input id="operation-submit" type="submit">
+            </form>
+        </div>
+
+        <div class="operations-list">
+            <table>
+                <thead>
                     <tr>
                         <th>Title</th>
-                        <th>Amount</th>
-                        <th></th>
+                        <th>Value</th>
                     </tr>
-                </table>
-            </div>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>
+                            <button class="option edit"></button>
+                            <button class="option delete"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-
+<script src="scripts/main.js"></script>
 </body>
 </html>

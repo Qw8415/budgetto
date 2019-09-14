@@ -1,32 +1,126 @@
+:root {
+    --main-color-1: yellowgreen;
+    --main-color-2: black;
+    --positive-color: green;
+    --negative-color: red;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "Arial", sans-serif;
 }
 
-#main-container {
+header {
+    width: 100%;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 42px;
+    text-shadow: 2px 2px var(--positive-color);
+}
+
+.container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: auto;
     max-width: 1200px;
-}
-
-header {
-    width: 100%;
-    border-top: 5px solid dodgerblue;
-    border-bottom: 5px solid dodgerblue;
-    border-radius: 5px;
-}
-
-header > h1 {
-    font-size: 40px;
-    font-weight: bold;
     text-align: center;
 }
 
-.container {
-    width: 45%;
-    border: 1px solid black;
+.budget-form,
+.operations-form,
+.summary,
+.operations-list {
+    display: inline-block;
 }
 
+.budget-form,
+.operations-form {
+    width: 400px;
+}
 
+.summary,
+.operations-list {
+    width: 500px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    padding: 15px 20px;
+    border: 2px solid var(--main-color-2);
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+}
+
+form > * {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+input{
+    border: 1px solid var(--main-color-2);
+    border-radius: 3px;
+    box-shadow: 1px 1px;
+}
+
+input[type="submit"] {
+    background: var(--main-color-1);
+    width: 50%;
+    margin-left: 50%;
+}
+
+.summary {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.image {
+    background: var(--main-color-1);
+}
+
+#balance-summary, #budget-summary, #operations-summary {
+    color: var(--positive-color);
+    text-shadow: 1px 1px var(--main-color-2);
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    font-size: 20px;
+}
+
+td:first-child {
+    width: 45%;
+    text-align: left;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td:nth-child(3) {
+    width: 20%;
+}
+
+.option {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.edit {
+    background-image: url("../images/edit.png");
+}
+
+.delete {
+    background-image: url("../images/delete.png");
+}
