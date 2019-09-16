@@ -1,5 +1,5 @@
 :root {
-    --main-color-1: yellowgreen;
+    --main-color-1: orange;
     --main-color-2: black;
     --positive-color: green;
     --negative-color: red;
@@ -98,17 +98,20 @@ thead {
     font-size: 20px;
 }
 
-td:first-child {
-    width: 45%;
-    text-align: left;
-}
-
 th, td {
     padding: 5px;
 }
 
-td:nth-child(3) {
+th:nth-child(1) {
+    width: 45%;
+}
+
+th:nth-child(3) {
     width: 20%;
+}
+
+td:first-child {
+    text-align: left;
 }
 
 .option {
