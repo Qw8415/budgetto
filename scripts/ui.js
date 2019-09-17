@@ -7,6 +7,8 @@ export class Ui {
         this.operationForm = document.getElementById("operation-form");
         this.operationTitle = document.getElementById("operation-title");
         this.operationValue = document.getElementById("operation-value");
+        this.expense = document.getElementById("expense");
+        this.income = document.getElementById("income");
         this.operationSubmit = document.getElementById("operation-submit");
         this.operationSummary = document.getElementById("operations-summary");
         this.balanceSummary = document.getElementById("balance-summary");

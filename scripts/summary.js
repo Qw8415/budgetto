@@ -1,19 +1,12 @@
-import {Operation} from "./operation.js";
-
 export class Summary {
     constructor() {
         this._budget = 0;
-        this._operations = [];
         this._operationsSum = 0;
         this._balance = 0;
     }
 
     get budget() {
         return this._budget;
-    }
-
-    get operations() {
-        return this._operations;
     }
 
     get operationsSum() {
@@ -30,18 +23,15 @@ export class Summary {
     }
 
     set operationsSum(value) {
-        this._operationsSum = value;
+        this._operationsSum = parseFloat(value);
     }
 
-    addOperation(title, value) {
-        const operation = new Operation(title, value);
-        this.operations.push(operation);
-        this.operationsSum += operation.value;
+    addOperation(value) {
+        this.operationsSum += parseFloat(value);
     }
 
-    deleteOperation(index) {
-        this.operationsSum -= this.operations[index].value;
-        this.operations.splice(index, 1);
+    deleteOperation(value) {
+        this.operationsSum -= value;
     }
 
     refreshBalance() {
